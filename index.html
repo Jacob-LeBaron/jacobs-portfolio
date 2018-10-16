@@ -38,12 +38,26 @@
         
         <div class="divider"></div>
         
+	<div>
+		<ul id=”film-list”></ul>
+	</div>
         <footer></footer>
-    <script>
+    <script type=”module” src=”main.js”> </script>
         
-        var link = document.querySelector('a');
-        
-        document.querySelectorAll = console.log("lets go fam");
+        Import { films } from `./assets/fims.js`
+	Import { starships } from `./assets/fims.js`
+	Import { people } from `./assets/fims.js`
+
+	Let filmList = document.querySelector(“#film-list”)
+
+	films.forEach((film) => {
+	     Let listItem = document.createElement(`li`);
+		listItem.textContent = film.opening_crawl
+		filmList.appendChild(listItem)
+	console.log(film.title)})
+
+	Console.log(people[9]);
+
         
     </script>
     </body>   
