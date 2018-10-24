@@ -272,22 +272,22 @@ z-index: 5;
 #phone {
         position: relative;
     text-align: left;
-    color: #122;
+    color: #111;
     width: 500px;
     margin: 50px;
     font-family: 'Amatic SC', cursive;
-    font-size: 32px;
+    font-size: 48px;
     z-index: 4;
 }
 
 #email {
     position: relative;
     text-align: left;
-    color: #122;
+    color: #111;
     width: 800px;
     margin: 50px;
     font-family: 'Amatic SC', cursive;
-    font-size: 32px;
+    font-size: 48px;
     z-index: 4;
 }
 
