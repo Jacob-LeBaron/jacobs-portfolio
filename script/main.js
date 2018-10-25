@@ -2,17 +2,15 @@
 	Import { starships } from `./assets/fims.js`
 	Import { people } from `./assets/fims.js`
 
-	let filmList = document.querySelector("#film-list”)
-
-	people.forEach((people) => {
+	people.forEach(people) => {
 	    let  listItem = document.createElement("text");
 		listItem.textContent = people.name
 		people.appendChild(listItem)
-	   console.log(film.title)})
+	   console.log(film.title)}
 
 	Console.log(people[9]);
 
-let myPeople = document.querySelector("#myPeople");
+let myPeople = document.querySelector('apitext');
 
 fetch('https://swapi.co/api/people/10')
   .then(function(response) {
@@ -45,7 +43,7 @@ var jcontent = {
 
 var apitext = document.getElementById('apitext');
 apitext.innerHTML = jcontent.name + '' + jcontent.birth_year;
-=======
+
 Import { films } from `./assets/fims.js`
 	Import { starships } from `./assets/fims.js`
 	Import { people } from `./assets/fims.js`
@@ -59,4 +57,4 @@ Import { films } from `./assets/fims.js`
 	console.log(film.title)})
 
 	Console.log(people[9]);
->>>>>>> 26e0d4beaed8f1b0e5ec5262ddc10d080b48a454
+
