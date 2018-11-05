@@ -294,7 +294,7 @@ z-index: 5;
 .divider {
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 500px;
     top: 1250px;
     background-image: linear-gradient(to bottom, cyan, white);
 }
