@@ -1,4 +1,4 @@
-export const species = [
+export const species = {
     {
         "name": "Hutt",
         "classification": "gastropod",
@@ -860,4 +860,4 @@ export const species = [
         "edited": "2016-07-19T13:27:03.156498Z",
         "url": "https://swapi.co/api/species/4/"
     }
-]
+}

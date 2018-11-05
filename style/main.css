@@ -294,8 +294,16 @@ z-index: 5;
 .divider {
     position: absolute;
     width: 100%;
+    height: 100px;
+    top: 1250px;
+    background-image: linear-gradient(to bottom, cyan, white);
+}
+
+.divider-c {
+    position: absolute;
+    width: 100%;
     height: 600px;
-    top: 1000px;
+    top: 1050px;
     background-image: linear-gradient(to bottom, cyan, white);
 }
 

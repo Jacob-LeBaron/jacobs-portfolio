@@ -1,6 +1,7 @@
-    Import { films } from `./assets/fims.js`
-	Import { starships } from `./assets/fims.js`
-	Import { people } from `./assets/fims.js`
+    import { senatorData } from '../assets/senators.js'    
+    import { films } from `./assets/fims.js`
+	import { starships } from `./assets/fims.js`
+	import { people } from `./assets/fims.js`
 
 	people.forEach(people) => {
 	    let  listItem = document.createElement("text");
@@ -58,3 +59,50 @@ Import { films } from `./assets/fims.js`
 
 	Console.log(people[9]);
 
+
+
+console.log(senatorData.results[0].members)
+//also you can make it a constant by doing
+const senators = senatorData.results[0].members
+
+const republicans = senators.filter(senator => senators.party === "R")
+      
+const democrats = senators.filter(senator => senators.party === "D")
+  
+const males = senators.filter(senator => senators.gender === "M")
+const females = senators.filter(senator => senators.gender === "F") 
+  
+const loyalRepublican = republicans.reduce((acc, senators) => senators.votes_with_party_pct > 0 ? senator : acc, 0)
+  
+const loyalDemocrat = democrats.reduce((acc, senators) => senators.votes_with_party_pct > 0 ? senator : acc, 0)
+
+console.log(`There are ${republicans.length} republican and %{democrats.length} democrats in the Senate.`)
+
+console.log(`There are ${males.length} in the Senate and ${females.length} women.`)
+
+console.log(`The most loyal republican is ${loyalRepublican.length} ${loyalRepublican.last_name} from ${loyalRepublican.state} who votes with republicans ${loyalRepublican.votes_with_party_pct}% of the time.`)
+
+const senWithPics = senators.map(senator => {
+  senator.imgURL = `https://www.govtrack.us/data/photos/${senator.govtrack_id}-200px.jpeg`
+  if(senator.govtrack_id === '412743') {
+    senator.imgURL = `https://www.govtrack.us/data/photos/${senator.govtrack_id}-200px.jpeg`
+  }
+  return senator
+})
+
+console.log(senWithPics)
+
+  let picutreDiv = document.querySelector('.senator-cont')
+  
+senWithPics.forEach(senator => {
+  let senatorPic = document.createElement('img')
+  let senatorFig = document.createElement('figure')
+  let senatorCap = document.createElement('caption')
+senatorCap.textContent = `${senator.first_name} ${senator.last_name}`
+senatorPic.src = senator.imgURL
+  senatorFig.appendChild(senatorPic)
+  senatorFig.appendChild(senatorCap)
+  pictureDiv.appendChild(senatorFig)
+})
+
+console.log(pictureDiv)

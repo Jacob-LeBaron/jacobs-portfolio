@@ -1,4 +1,4 @@
-export const people = [
+export const people = {
     {
         "name": "Luke Skywalker",
         "height": "172",
@@ -2064,4 +2064,4 @@ export const people = [
         "edited": "2016-04-20T17:06:31.502555Z",
         "url": "https://swapi.co/api/people/35/"
     }
-]
+}

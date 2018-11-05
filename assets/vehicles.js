@@ -1,4 +1,4 @@
-export const vehicles = [
+export const vehicles = {
     {
         "name": "Sand Crawler",
         "model": "Digger Crawler",
@@ -812,4 +812,4 @@ export const vehicles = [
         "edited": "2014-12-22T18:21:16.390980Z",
         "url": "https://swapi.co/api/vehicles/57/"
     }
-]
+}

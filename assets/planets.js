@@ -1,4 +1,4 @@
-export const planets = [
+export const planets = {
     {
         "name": "Alderaan",
         "rotation_period": "24",
@@ -1166,4 +1166,4 @@ export const planets = [
         "edited": "2015-04-17T06:55:57.556551Z",
         "url": "https://swapi.co/api/planets/61/"
     }
-]
+}
