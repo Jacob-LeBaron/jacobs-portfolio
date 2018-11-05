@@ -43,9 +43,6 @@ nav li {
   margin-left: 70px;
   padding-top: 28px;
   position: relative;
-    
-  
-  
 }
 
 nav a {
@@ -334,4 +331,8 @@ z-index: 5;
     width: 30%;
     height: 6%;
     float: left;
+}
+
+@media screen and (max-width: 960px) {
+    
 }
