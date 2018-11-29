@@ -1,4 +1,4 @@
-import { pokedex } from '../Pokemon-DB-master/pokemon.js'
+import { pokedex } from '../Pokemon-DB-master/pokedex.js'
 
 console.log(pokedex)
 
