@@ -37,6 +37,7 @@ const pokeCards = (poke) => {
     cap.textContent = poke.ename
     img.src = `../Pokemon-dex/img/${poke.id}${poke.ename}.png`
     backimg.src = `../Pokemon-dex/spr/${poke.id}${poke.ename}.png`
+    
     if(poke.id < '001') {
         img.src=`../Pokemon-dex/spr/100MS.png`
     }
