@@ -4,20 +4,24 @@ console.log(pokedex)
 
 const pokeContainer = document.querySelector('#container')
 
+
+//Front Card 
 const cardCreator = (poke) => {
     console.log(`${poke.id}${poke.ename}.png`)
     let card = document.createElement('div')
     let fig = document.createElement('figure')
     let img = document.createElement('img')
     let cap = document.createElement('figcaption')
+
     fig.appendChild(img)
     fig.appendChild(cap)
     card.appendChild(fig)
-    
+//
+
+//Back Card
     let backimg = document.createElement('img')
     let backcard = document.createElement('div')
     let stats = document.createElement('ul')
-
     let attack = document.createElement('li')
     let defense = document.createElement('li')
     let health = document.createElement('li')
