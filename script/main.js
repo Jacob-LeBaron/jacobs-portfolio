@@ -4,15 +4,18 @@ console.log(pokedex)
 
 const pokeContainer = document.querySelector('#container')
 
-const pokeCards = (poke) => {
+const cardCreator = (poke) => {
     console.log(`${poke.id}${poke.ename}.png`)
     let card = document.createElement('div')
     let fig = document.createElement('figure')
     let img = document.createElement('img')
     let cap = document.createElement('figcaption')
+    fig.appendChild(img)
+    fig.appendChild(cap)
+    card.appendChild(fig)
+    
     let backimg = document.createElement('img')
     let backcard = document.createElement('div')
-    let backimg = document.createElement('img')
     let stats = document.createElement('ul')
 
     let attack = document.createElement('li')
@@ -27,32 +30,30 @@ const pokeCards = (poke) => {
     backcard.className = 'back'
     stats.className = 'stats'
     
-    card.addEventListener( 'mouseover', function() {
+    card.addEventListener( 'click', function() {
         card.classList.toggle('is-flipped')
     });
 
-    attack.textContent = `(${poke.stats["Atk"]})`
-    defense.textContent = `(${poke.stats["Def"]})`
-    health.textContent = `(${poke.stats["HP"]})`
+    attack.textContent = `(${poke.base["Attack"]})`
+    defense.textContent = `(${poke.base["Defense"]})`
+    health.textContent = `(${poke.base["HP"]})`
     cap.textContent = poke.ename
-    img.src = `../Pokemon-dex/img/${poke.id}${poke.ename}.png`
-    backimg.src = `../Pokemon-dex/spr/${poke.id}${poke.ename}.png`
+    img.src = `../Pokemon-DB-master/img/${poke.id}${poke.ename}.png`
+    backimg.src = `../Pokemon-DB-master/spr/${poke.id}MS.png`
     
     if(poke.id < '001') {
         img.src=`../Pokemon-dex/spr/100MS.png`
     }
+    pokeContainer.appendChild(card)
+}
 
-    pokemon.forEach(element => cardCreator(element))
+pokedex.forEach(element => cardCreator(element))
 
-
-    let createCard = document.querySelector('#createCard')
-    createCard.addEventListener('click', () => {
-    return cardCreator(newCard)
+let createCard = document.querySelector('#createCreation')
+createCard.addEventListener('click', () => {
+return cardCreator(newCard)
 })
 
-    
-
-};
 
 console.log(pokeContainer)
-console.log(pokeCards)
+console.log(cardCreator)
