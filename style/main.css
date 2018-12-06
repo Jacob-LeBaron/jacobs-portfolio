@@ -64,7 +64,7 @@ nav a::before {
   content: '';
   display: block;
   height: 5px;
-  background-color: #fff;
+  background-image: linear-gradient(to right, #282832, cyan);
   position: absolute;
   top: 0;
   width: 0%;
@@ -333,80 +333,6 @@ nav a:hover::before {
     top: 1050px;
     background-image: linear-gradient(to bottom, cyan, white);
 }
-
-#kenobi {
-    width: 70%;
-    height: 100%;
-    float: right;
-}
-
-#api-footer {
-    background-color: #222;
-    position: relative;
-    top: 1400px;
-    width: 100%;
-    height: 400px;
-}
-
-#api-cont {
-    background-color: #402629;
-    width: 80%;
-    height: 100%;
-    margin: auto;
-}
-
-#apitext {
-    margin-top: 80px;
-    background-color: white;
-    width: 30%;
-    height: 6%;
-    float: left;
-}
-
-  /* pokemon card api */
-.scene {
-    width: 200px;
-    height: 260px;
-    border: 1px solid #CCC;
-    margin: 40px 0;
-    perspective: 600px;
-  }
-  
-  .card {
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .card.is-flipped {
-    transform: rotateY(180deg);
-  }
-  
-  .card__face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    line-height: 260px;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
-    backface-visibility: hidden;
-  }
-  
-  .card__face--front {
-    background: red;
-  }
-  
-  .card__face--back {
-    background: blue;
-    transform: rotateY(180deg);
-  }
-
-  /* pokemon card api */
 
 @media screen and (max-width: 960px) {
     
