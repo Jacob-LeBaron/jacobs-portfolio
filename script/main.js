@@ -36,6 +36,7 @@ const cardCreator = (poke) => {
     
     card.addEventListener( 'click', function() {
         card.classList.toggle('is-flipped')
+       
     });
 
     attack.textContent = `(${poke.base["Attack"]})`
@@ -50,6 +51,8 @@ const cardCreator = (poke) => {
     // }
     pokeContainer.appendChild(card)
 }
+
+base.appendChild('defense')
 
 pokedex.forEach(element => cardCreator(element))
 
