@@ -28,11 +28,11 @@ const cardCreator = (poke) => {
 
     card.className = 'card'
     fig.className = 'front'
-    img.className = 'pokemon'
+    img.className = 'pokemon-chara'
     cap.className = 'pokemonname'
     backimg.className = 'background'
     backcard.className = 'back'
-    stats.className = 'stats'
+    stats.className = 'traits'
     
     card.addEventListener( 'click', function() {
         card.classList.toggle('is-flipped')
@@ -45,17 +45,18 @@ const cardCreator = (poke) => {
     img.src = `../Pokemon-DB-master/img/${poke.id}${poke.ename}.png`
     backimg.src = `../Pokemon-DB-master/spr/${poke.id}MS.png`
     
-    if(poke.id < '001') {
-        img.src=`../Pokemon-dex/spr/100MS.png`
-    }
+    // if(poke.id < '001') {
+    //     img.src=`../Pokemon-dex/spr/100MS.png`
+    // }
     pokeContainer.appendChild(card)
 }
 
 pokedex.forEach(element => cardCreator(element))
 
-let createCard = document.querySelector('#createCreation')
-createCard.addEventListener('click', () => {
+let cardCreation = document.querySelector('#createCreation')
+cardCreation.addEventListener('click', () => {
 return cardCreator(newCard)
+
 })
 
 

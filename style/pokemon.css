@@ -13,7 +13,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-.pokemon{
+.pokemon-chara{
     height: 350px;
     width: 300px;
 }
@@ -22,6 +22,9 @@ h1 {
    display: flex;
    justify-content: center;
    font-family: 'Josefin Sans', sans-serif;
+   padding-top: 8px;
+   font-size: 35px;
+   border-radius:25px;
    background-color: #192653;
    color: #ffcb05;
 }
@@ -81,8 +84,9 @@ h1{
 }
 
 .card .front {
-  background: #444;
-  }
+    background-image: linear-gradient(to bottom right, #444, cyan);
+    border-radius: 25px;
+}
 
 .card .back {
     background: #444;
