@@ -52,7 +52,7 @@ const cardCreator = (poke) => {
     pokeContainer.appendChild(card)
 }
 
-base.appendChild('defense')
+
 
 pokedex.forEach(element => cardCreator(element))
 
