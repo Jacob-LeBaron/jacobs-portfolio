@@ -25,18 +25,6 @@ const cardCreator = (poke) => {
     let defense = document.createElement('li')
     let health = document.createElement('li')
 
-    backcard.style.backgroundImage = backimg.img
-    // card.appendChild(backimg)
-    // backcard.appendChild(stats)
-    // stats.appendChild(attack)
-    // stats.appendChild(defense)
-    // stats.appendChild(health)
-        fig.appendChild(img)
-    fig.appendChild(cap)
-    card.appendChild(fig)
-  fig.appendChild(stats)
-    fig.appendChild(attack)
-
     card.className = 'card'
     fig.className = 'front'
     img.className = 'pokemon-chara'
@@ -44,6 +32,13 @@ const cardCreator = (poke) => {
     backimg.className = 'background'
     backcard.className = 'back'
     stats.className = 'traits'
+
+    fig.appendChild(img)
+    fig.appendChild(cap)
+    card.appendChild(fig)
+    card.appendChild(backimg)
+ 
+   
     
     card.addEventListener( 'click', function() {
         card.classList.toggle('is-flipped')
@@ -57,9 +52,6 @@ const cardCreator = (poke) => {
     img.src = `../Pokemon-DB-master/img/${poke.id}${poke.ename}.png`
     backimg.src = `../Pokemon-DB-master/spr/${poke.id}MS.png`
     
-    // if(poke.id < '001') {
-    //     img.src=`../Pokemon-dex/spr/100MS.png`
-    // }
     pokeContainer.appendChild(card)
 }
 
