@@ -56,8 +56,7 @@ const cardCreator = (poke) => {
    
 }
 
-
-
+//Creating new card
 let newCard = {
     "ename": "Kabutops",
     "id": "141",
@@ -70,6 +69,9 @@ let newCard = {
         "Speed": "80"
     },
 }
+
+//Creating Random Card
+
 
 pokedex.forEach(element => cardCreator(element))
 
