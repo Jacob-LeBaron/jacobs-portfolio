@@ -53,13 +53,27 @@ const cardCreator = (poke) => {
     backimg.src = `../Pokemon-DB-master/spr/${poke.id}MS.png`
     
     pokeContainer.appendChild(card)
+   
 }
 
 
 
+let newCard = {
+    "ename": "Kabutops",
+    "id": "141",
+    "base": {
+        "Attack": "115", 
+        "Defense": "105", 
+        "HP": "60", 
+        "Sp.Atk": "65", 
+        "Sp.Def": "70", 
+        "Speed": "80"
+    },
+}
+
 pokedex.forEach(element => cardCreator(element))
 
-let cardCreation = document.querySelector('#createCreation')
+let cardCreation = document.querySelector('#cardCreation')
 cardCreation.addEventListener('click', () => {
 return cardCreator(newCard)
 

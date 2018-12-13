@@ -52,7 +52,7 @@ h1{
 .card {
   width: 300px;
   height: 400px;
-  margin: 10px;
+  margin: 30px;
   display: flex;
   flex-wrap: wrap;
   -webkit-transition: -webkit-transform .6s;
@@ -65,30 +65,13 @@ h1{
   -webkit-transform-origin: 50% 50%;
 }
 
-.card div {
-  cursor: pointer;
-  display: block;
-  height: 100%;
-  width: 100%;
-  line-height: 260px;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  font-size: 140px;
-  /* position: absolute; */
-   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
 .card .front {
+  height: 395px;
   background-image: linear-gradient(to bottom right, #444, cyan);
   border-radius: 25px;
 }
 
 .card .back {
-  background-image: linear-gradient(to bottom right, #444, cyan);
   -webkit-transform: rotateY( 180deg );
   -moz-transform: rotateY( 180deg );
   -o-transform: rotateY( 180deg );
@@ -96,10 +79,12 @@ h1{
 }
 
 .background{
-  height: 350px;
-  width: 300px;
-  opacity: 0.4;
-  position: relative;
+  position: absolute;
+  height: 300px;
+  border-radius: 25px;
+  background-image: url("../Pokemon-DB-master/img/pokemon-backdrop.jpg");
+  
+  
 }
 
 .card.is-flipped {
@@ -110,9 +95,9 @@ h1{
 } 
 
 .flip-container {
-	perspective: 1000px;
+	perspective: 3000px;
 }
-	/* flip the pane when hovered */
+
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
 		transform: rotateY(180deg);
 	}
@@ -122,7 +107,7 @@ h1{
 	height: 480px;
 }
 
-/* flip speed goes here */
+
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
@@ -130,7 +115,6 @@ h1{
 	position: relative;
 }
 
-/* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
 
@@ -139,15 +123,15 @@ h1{
 	left: 0;
 }
 
-/* front pane, placed above back */
+
 .front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
+  z-index: 2;
+  	transform: rotateY(0deg);
 }
 
-/* back, initially hidden pane */
+
 .back {
+
 	transform: rotateY(180deg);
 }
 
