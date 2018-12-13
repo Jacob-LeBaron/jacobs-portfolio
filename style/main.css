@@ -10,23 +10,10 @@ header {
     width: 100%;
     height: 100px;
     top:0;
-    z-index: 200;
+    z-index: 6; /*static for all webpages*/
 }
 
-.container {
-    width: 100%;
-    height: 50px;
-  
-}
-
-nav {
-  left: 0;
-  top: 0; 
-  
-      
-  
-}
-
+/*positioning of nav items*/
 nav ul {
   margin: 0 15px;
   padding: 0;
@@ -38,13 +25,15 @@ nav ul {
     
 }
 
+/*Also, positioning of nav items*/
 nav li {
   display: inline-block;
-  margin-left: 70px;
+  margin-left: 30px;
   padding-top: 28px;
   position: relative;
 }
 
+/*color of nav items*/
 nav a {
   color: beige;
   text-decoration: none;
@@ -55,11 +44,13 @@ nav a {
     
 }
 
+/*ease bar top of nav items, color*/
 nav a:hover {
   color: #2dbabf;
    
 }
 
+/*ease bar top of nav items length, before hover*/
 nav a::before {
   content: '';
   display: block;
@@ -73,11 +64,13 @@ nav a::before {
     
 }
 
+/*ease bar top of nav items length, when hovered*/
 nav a:hover::before {
   width: 100%;
     
 }
 
+/*mountains static in background*/
 .mountain {
     margin:5.7% 0;
     width: 100%;
@@ -90,7 +83,7 @@ nav a:hover::before {
     
 }
 
-
+/*styling and positioning of nav*/
 .main-nav {
     position: fixed;
     width: 100%;
@@ -101,14 +94,16 @@ nav a:hover::before {
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
+/*personal logo in nav*/
 #logo {
     position:fixed;
     margin: .5% 5%;
     float: right;
     height: 9%;
-    z-index:2;
+    z-index:1;
 }
 
+/*paralaxed tree image*/
 .trees {
     position: absolute;
     margin-top:5.7px;
@@ -117,8 +112,7 @@ nav a:hover::before {
     object-fit: contain;
     z-index: 1;
 }
-
-/*above is main top nav*/ 
+/*main top nav ^^^^*/ 
 
 .intro {
     position: relative;
@@ -136,7 +130,6 @@ nav a:hover::before {
   top: 780px;
   height: 500px;
   width: 100%;
-  background-color: blue;
   background-image: linear-gradient(to bottom, #131319, cyan);
   z-index: 5;
     
@@ -152,7 +145,7 @@ nav a:hover::before {
 }
 /*gradients for background*/
 
-#skills-cont {
+#skills-sec {
     position: absolute;
     width: 100%;
     height: 180px;
@@ -178,8 +171,60 @@ nav a:hover::before {
     height: 500px;
     top: 1450px;
     background-image: linear-gradient(to bottom, #FFAA64, #FF0000);
-    background-color: #FF0000;
 }
+
+.skill-names {
+    display: flex;
+    height: 100%;
+    width: 80%;
+    font-size: 30px;
+    color: #282832;
+    font-family: "Josefin Sans",sans-serif;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.skill-a {
+    display: flex;
+    height: 25px;
+    width: 90%;
+    margin: 20px;
+    border-radius: 0 15px 15px 15px;
+    background-image: linear-gradient(to right, #282832, cyan);
+    z-index: 9;
+
+}
+.skill-b {
+    display: flex;
+    height: 25px;
+    width: 65%;
+    margin: 20px;
+    border-radius: 0 15px 15px 15px;
+    background-image: linear-gradient(to right, #282832, cyan);
+    z-index: 9;
+
+}
+.skill-c {
+    display: flex;
+    height: 25px;
+    width: 50%;
+    margin: 20px;
+    border-radius: 0 15px 15px 15px;
+    background-image: linear-gradient(to right, #282832, cyan);
+    z-index: 9;
+
+}
+.skill-d {
+    display: flex;
+    height: 25px;
+    width: 90%;
+    margin: 20px;
+    border-radius: 0 15px 15px 15px;
+    background-image: linear-gradient(to right, #282832, #00c9ff);
+    z-index: 9;
+
+}
+
 
 
 .info {
@@ -234,7 +279,8 @@ nav a:hover::before {
         
 }
 
-
+/*hover images on "Projects" page*/
+/* green solution landscaping hover property */
 .container-g img {
     position: absolute;
     width: 100%;
@@ -254,6 +300,7 @@ nav a:hover::before {
     opacity: .8;
 }
 
+/* Joel P. Jensen School hover property*/
 .container-j {
     position: relative;
       top: 100px;

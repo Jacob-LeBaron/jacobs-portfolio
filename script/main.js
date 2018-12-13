@@ -12,10 +12,9 @@ const cardCreator = (poke) => {
     let fig = document.createElement('figure')
     let img = document.createElement('img')
     let cap = document.createElement('figcaption')
-
-    fig.appendChild(img)
-    fig.appendChild(cap)
-    card.appendChild(fig)
+    // fig.appendChild(img)
+    // fig.appendChild(cap)
+    // card.appendChild(fig)
 //
 
 //Back Card
@@ -25,6 +24,18 @@ const cardCreator = (poke) => {
     let attack = document.createElement('li')
     let defense = document.createElement('li')
     let health = document.createElement('li')
+
+    backcard.style.backgroundImage = backimg.img
+    // card.appendChild(backimg)
+    // backcard.appendChild(stats)
+    // stats.appendChild(attack)
+    // stats.appendChild(defense)
+    // stats.appendChild(health)
+        fig.appendChild(img)
+    fig.appendChild(cap)
+    card.appendChild(fig)
+  fig.appendChild(stats)
+    fig.appendChild(attack)
 
     card.className = 'card'
     fig.className = 'front'
