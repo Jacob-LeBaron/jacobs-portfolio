@@ -102,6 +102,7 @@ nav a:hover::before {
     height: 9%;
     z-index:1;
 }
+/*main top nav ^^^^*/ 
 
 /*paralaxed tree image*/
 .trees {
@@ -112,7 +113,7 @@ nav a:hover::before {
     object-fit: contain;
     z-index: 1;
 }
-/*main top nav ^^^^*/ 
+
 
 .intro {
     position: relative;

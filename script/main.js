@@ -72,6 +72,11 @@ let newCard = {
 
 //Creating Random Card
 
+// let randomCard = document.querySelector('#randomCard')
+// cardCreation.addEventListener('click', () => {
+// return 
+
+// })
 
 pokedex.forEach(element => cardCreator(element))
 
